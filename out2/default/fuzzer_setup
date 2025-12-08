@@ -1,0 +1,5 @@
+# environment variables:
+AFL_I_DONT_CARE_ABOUT_MISSING_CRASHES=1
+AFL_KILL_SIGNAL=9
+# command line:
+'afl-fuzz' '-i' 'in' '-o' 'out2' '-x' 'json.dict' '-s' '69' '-V' '600' '--' './jsoncpp_fuzz'
