@@ -15,7 +15,7 @@ COV_BUILD_DIR="$JSONCPP_DIR/build-llvmcov"
 HARNESS_SRC="$ROOT/main.cpp"            # your harness source
 HARNESS_BIN="$ROOT/jsoncpp_fuzz_cov"    # coverage build of harness
 
-AFL_OUT_DIR="$ROOT/out3/default"         # AFL++ -o out  => out/default/...
+AFL_OUT_DIR="$ROOT/out2/default"         # AFL++ -o out  => out/default/...
 QUEUE_DIR="$AFL_OUT_DIR/queue"
 
 PROFRAW_DIR="$ROOT/profraw"
