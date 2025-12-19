@@ -1,1 +1,21 @@
-None Null
+#Example usages:
+
+  To run plotter:
+  
+  ```python3 plot_coverage_fast.py --runs out2:out3 --labels "Default Fuzzer":"Encoded-based Fuzzing" --time-shifts 0:60 --output coverage_comparison_out2_vs_out3_seed420.png --harness ./jsoncpp_fuzz_cov```
+  
+  To check coverage(note: modify hardcoded paths):
+  
+  ```./coverage.sh```
+
+  compilation with AFL-fast:
+  ```afl-clang-fast++ -O2 main.cpp     -Ijsoncpp/include     jsoncpp/build-afl/lib/libjsoncpp.a     -o jsoncpp_fuzz```
+  
+  generate seeds from interesting inputs AFL++ found(modify paths inside the script)
+  ```python3 seed.py```
+  
+  Example usage of AFL++:
+
+  ```afl-fuzz   -i intrim -o out3   -x json.dict   -s 67 -V 1800 -D   -- ./jsoncpp_fuzz ```
+
+Note: Use AFL++ trim functions to make generated seeds more optimized!
