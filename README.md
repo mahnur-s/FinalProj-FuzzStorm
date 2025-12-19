@@ -1,4 +1,4 @@
-## Example Usages
+# Example Usages
 
 ### Run Plotter
 
@@ -9,8 +9,8 @@ python3 plot_coverage_fast.py \
   --output coverage_comparison_out2_vs_out3_seed420.png \
   --harness ./jsoncpp_fuzz_cov
 
-### Check Coverage
-# Note: Modify hardcoded paths inside the script.
+## Check Coverage
+### Note: Modify hardcoded paths inside the script.
 
 ./coverage.sh
 
@@ -21,8 +21,8 @@ afl-clang-fast++ -O2 main.cpp \
   jsoncpp/build-afl/lib/libjsoncpp.a \
   -o jsoncpp_fuzz
 
-### Generate Seeds from Interesting Inputs Found by AFL++
-# Note: Modify paths inside the script.
+## Generate Seeds from Interesting Inputs Found by AFL++
+### Note: Modify paths inside the script.
 
 python3 seed.py
 
@@ -37,5 +37,5 @@ afl-fuzz \
   -D \
   -- ./jsoncpp_fuzz
 
-### Notes
-# Use AFL++ trim functions to optimize generated seeds.
+# Notes
+### Use AFL++ trim functions to optimize generated seeds.
